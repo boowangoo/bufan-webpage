@@ -1,0 +1,38 @@
+* {
+	font-family: "Times New Roman", Times, serif;
+}
+
+body {
+	background-image: url("../img/vaporhead_bg.gif");
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+#header {
+}
+
+#header, #container {
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #1b1a16;
+	color: #acbccc;
+	border-style: groove;
+	border-color: #acbccc;
+}
+
+@media screen and (max-width: 1000px) {
+	#header, #container {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#header, #container  {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}

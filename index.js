@@ -1,10 +1,10 @@
 const app = require('express')();
 const http = require('http').Server(app);
 
-const PORT = 3000;
+const PORT = 8080;
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/index.html');
+	res.sendFile(__dirname + '/src/html/index.html');
 });
 
 http.listen(PORT, () => {
