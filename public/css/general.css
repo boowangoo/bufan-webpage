@@ -1,5 +1,13 @@
 * {
-	font-family: "Times New Roman", Times, serif;
+	font-family: SimSun, serif;
+}
+
+a, h1 {
+	color: #36849b;
+}
+
+a:hover {
+	color: #ba5da7;
 }
 
 body {
@@ -8,30 +16,58 @@ body {
 	background-attachment: fixed;
 }
 
-#header {
+
+div#title img {
+	display: block;
+	margin: 0 auto;
 }
 
-#header, #container {
-	margin-left: 30%;
-	margin-right: 30%;
+div#header {
+	display: table;
+	width: 50%;
+	table-layout: fixed;
+}
+
+div#title, div#header, div#container {
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+div#header, div#container {
+	background-color: #1b1a16;
+	color: #acbccc;
+}
+
+div#header div {
+	display: table-cell;
+	border: groove #acbccc;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div#container {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding: 20px;
-	background-color: #1b1a16;
-	color: #acbccc;
-	border-style: groove;
-	border-color: #acbccc;
+	border: groove #acbccc;
 }
 
-@media screen and (max-width: 1000px) {
-	#header, #container {
+@media screen and (max-width: 1400px) {
+	div#header {
+		width: 70%;
+	}
+	div#title, div#header, div#container {
 		margin-left: 15%;
 		margin-right: 15%;
 	}
 }
 
 @media screen and (max-width: 700px) {
-	#header, #container  {
+	div#header {
+		width: 90%;
+	}
+	div#title, div#header, div#container {
 		margin-left: 5%;
 		margin-right: 5%;
 	}
