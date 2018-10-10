@@ -1,5 +1,10 @@
+@font-face {
+	font-family: "SimSun";
+	src: url("../res/font/SimSun.ttf");
+}
+
 * {
-	font-family: SimSun, serif;
+	font-family: "SimSun", serif;
 }
 
 a, h1 {
@@ -11,7 +16,7 @@ a:hover {
 }
 
 body {
-	background-image: url("../img/vaporhead_bg.gif");
+	background-image: url("../res/img/vaporhead_bg.gif");
 	background-repeat: repeat;
 	background-attachment: fixed;
 }
