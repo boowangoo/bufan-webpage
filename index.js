@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/public/html/index.html');
 });
 
+app.get('/asdf', (req, res) => {
+	res.send('asdf');
+});
+
 http.listen(PORT, () => {
 	console.log('listening on *:' + PORT);
 });
