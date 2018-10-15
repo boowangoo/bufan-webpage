@@ -4,16 +4,14 @@ const http = require('http').Server(app);
 
 const PORT = 8080;
 
-const routes = ['/home', '/cv', '/projects', '/blog', '/contact'];
-
 app.use(express.static(__dirname + '/public/'));
 
-// app.get('/', (req, res) => {
+// app.use((req, res) => {
 // 	res.sendFile(__dirname + '/public/html/index.html');
 // });
 
-app.use((req, res) => {
-	res.sendFile(__dirname + '/public/html/index.html');
+app.get('/', (req, res) => {
+	res.redirect('#/home');
 });
 
 // routes.map(route => {
