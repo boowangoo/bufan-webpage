@@ -1,4 +1,4 @@
-const hashes = {
+const myHashes = {
     '#/home': '../html/view/home.html',
     '#/cv': '../html/view/cv.html',
     '#/projects': '../html/view/projects.html',
@@ -7,10 +7,16 @@ const hashes = {
 };
 
 const loadByHash = () => {
-    $('#container').load(
-        hashes[location.hash] ||
-        '../html/view/error.html'
-    );
+    let hash = null;
+    
+    if (location.hash) {
+	    hash = myHashes[location.hash];
+    } else if (location.pathname === '/') {
+	    hash = '#/home';
+	    location.assign('#/home');
+    }
+    
+    $('#container').load(hash || '../html/view/error.html');
 };
 
 loadByHash();

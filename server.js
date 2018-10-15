@@ -6,12 +6,8 @@ const PORT = 8080;
 
 app.use(express.static(__dirname + '/public/'));
 
-// app.use((req, res) => {
-// 	res.sendFile(__dirname + '/public/html/index.html');
-// });
-
-app.get('/', (req, res) => {
-	res.redirect('#/home');
+app.use((req, res) => {
+	res.sendFile(__dirname + '/public/html/index.html');
 });
 
 // routes.map(route => {
