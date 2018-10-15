@@ -1,4 +1,4 @@
-const myHashes = {
+const hashFiles = {
     '#/home': '../html/view/home.html',
     '#/cv': '../html/view/cv.html',
     '#/projects': '../html/view/projects.html',
@@ -7,18 +7,12 @@ const myHashes = {
 };
 
 const loadByHash = () => {
-    let hash = null;
-    
-    if (location.hash) {
-	    hash = myHashes[location.hash];
-    } else if (location.pathname === '/') {
-	    hash = '#/home';
-	    location.assign('#/home');
-    }
-    
-    $('#container').load(hash || '../html/view/error.html');
+    $('#container').load(hashFiles[location.hash] || '../html/view/error.html');
 };
 
-loadByHash();
+if (!location.hash && location.pathname === '/') {
+	location.assign('#/home');
+}
 
 window.addEventListener('hashchange', loadByHash, false);
+window.addEventListener('load', loadByHash, false);

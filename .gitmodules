@@ -1,0 +1,3 @@
+[submodule "public/res/cv/bowangoo-cv"]
+	path = public/res/cv/bowangoo-cv
+	url = https://github.com/boowangoo/bowangoo-cv.git
