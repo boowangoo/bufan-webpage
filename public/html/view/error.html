@@ -1,11 +1,17 @@
 <table align="center">
 	<tr>
-		<td><img src="../../res/img/error1.gif"></td>
+		<td><img class="errImg" src=""></td>
 		<td><span id="notFound"></span></td>
-		<td><img src="../../res/img/error1.gif"></td>
+		<td><img class="errImg" src=""></td>
 	</tr>
 </table>
 
 <script type="text/javascript">
 	$('#notFound').html(location.href + ' not found')
+
+	if (currStyle === URL.DEFAULT) {
+		$('.errImg').attr('src', '');
+	} else {
+		$('.errImg').attr('src', '../../res/img/error1.gif');
+	}
 </script>

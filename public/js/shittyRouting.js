@@ -1,4 +1,4 @@
-const hashFiles = {
+var hashFiles = {
     '#/home': '../html/view/home.html',
     '#/cv': '../html/view/cv.html',
     '#/projects': '../html/view/projects.html',
@@ -6,7 +6,7 @@ const hashFiles = {
     '#/contact': '../html/view/contact.html'
 };
 
-const loadByHash = () => {
+var loadByHash = function() {
     $('#container').load(hashFiles[location.hash] || '../html/view/error.html');
 };
 
